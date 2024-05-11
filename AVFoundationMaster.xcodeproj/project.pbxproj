@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		617A959F2BEFAC9200FB566D /* AVPlayerContentView in Frameworks */ = {isa = PBXBuildFile; productRef = 617A959E2BEFAC9200FB566D /* AVPlayerContentView */; };
 		618424732BEFA03D00DBB4AB /* AVFoundationMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618424722BEFA03D00DBB4AB /* AVFoundationMasterApp.swift */; };
 		618424752BEFA03D00DBB4AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618424742BEFA03D00DBB4AB /* ContentView.swift */; };
 		618424772BEFA03E00DBB4AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618424762BEFA03E00DBB4AB /* Assets.xcassets */; };
@@ -34,14 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6184246F2BEFA03D00DBB4AB /* AVFoundationMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVFoundationMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6184246F2BEFA03D00DBB4AB /* AVFoundationMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AVFoundationMaster.app; path = "/Users/entaku/AVFoundationMaster/build/Debug-iphoneos/AVFoundationMaster.app"; sourceTree = "<absolute>"; };
 		618424722BEFA03D00DBB4AB /* AVFoundationMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationMasterApp.swift; sourceTree = "<group>"; };
 		618424742BEFA03D00DBB4AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		618424762BEFA03E00DBB4AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618424792BEFA03E00DBB4AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6184247F2BEFA03E00DBB4AB /* AVFoundationMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVFoundationMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6184247F2BEFA03E00DBB4AB /* AVFoundationMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AVFoundationMasterTests.xctest; path = "/Users/entaku/AVFoundationMaster/build/Debug-iphoneos/AVFoundationMasterTests.xctest"; sourceTree = "<absolute>"; };
 		618424832BEFA03E00DBB4AB /* AVFoundationMasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationMasterTests.swift; sourceTree = "<group>"; };
-		618424892BEFA03E00DBB4AB /* AVFoundationMasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVFoundationMasterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		618424892BEFA03E00DBB4AB /* AVFoundationMasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AVFoundationMasterUITests.xctest; path = "/Users/entaku/AVFoundationMaster/build/Debug-iphoneos/AVFoundationMasterUITests.xctest"; sourceTree = "<absolute>"; };
 		6184248D2BEFA03E00DBB4AB /* AVFoundationMasterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationMasterUITests.swift; sourceTree = "<group>"; };
 		6184248F2BEFA03E00DBB4AB /* AVFoundationMasterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationMasterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617A959F2BEFAC9200FB566D /* AVPlayerContentView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,24 +73,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		617A959D2BEFAC9200FB566D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		618424662BEFA03D00DBB4AB = {
 			isa = PBXGroup;
 			children = (
 				618424712BEFA03D00DBB4AB /* AVFoundationMaster */,
 				618424822BEFA03E00DBB4AB /* AVFoundationMasterTests */,
 				6184248C2BEFA03E00DBB4AB /* AVFoundationMasterUITests */,
-				618424702BEFA03D00DBB4AB /* Products */,
+				617A959D2BEFAC9200FB566D /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		618424702BEFA03D00DBB4AB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6184246F2BEFA03D00DBB4AB /* AVFoundationMaster.app */,
-				6184247F2BEFA03E00DBB4AB /* AVFoundationMasterTests.xctest */,
-				618424892BEFA03E00DBB4AB /* AVFoundationMasterUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		618424712BEFA03D00DBB4AB /* AVFoundationMaster */ = {
@@ -143,6 +142,9 @@
 			dependencies = (
 			);
 			name = AVFoundationMaster;
+			packageProductDependencies = (
+				617A959E2BEFAC9200FB566D /* AVPlayerContentView */,
+			);
 			productName = AVFoundationMaster;
 			productReference = 6184246F2BEFA03D00DBB4AB /* AVFoundationMaster.app */;
 			productType = "com.apple.product-type.application";
@@ -215,7 +217,7 @@
 				Base,
 			);
 			mainGroup = 618424662BEFA03D00DBB4AB;
-			productRefGroup = 618424702BEFA03D00DBB4AB /* Products */;
+			productRefGroup = 618424662BEFA03D00DBB4AB;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -588,6 +590,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		617A959E2BEFAC9200FB566D /* AVPlayerContentView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AVPlayerContentView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 618424672BEFA03D00DBB4AB /* Project object */;
 }

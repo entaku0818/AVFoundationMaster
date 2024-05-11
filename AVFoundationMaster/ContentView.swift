@@ -6,16 +6,21 @@
 //
 
 import SwiftUI
+import AVPlayerContentView
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                NavigationLink(destination: AVPlayerContentView()) {
+                    VStack {
+                        Text("AVPlayerContentView")
+                    }
+                    .padding()
+                }
+            }
+            .navigationTitle("AVFoundationMaster") 
         }
-        .padding()
     }
 }
 
