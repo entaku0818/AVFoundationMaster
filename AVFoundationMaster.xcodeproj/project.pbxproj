@@ -15,6 +15,10 @@
 		618424842BEFA03E00DBB4AB /* AVFoundationMasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618424832BEFA03E00DBB4AB /* AVFoundationMasterTests.swift */; };
 		6184248E2BEFA03E00DBB4AB /* AVFoundationMasterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6184248D2BEFA03E00DBB4AB /* AVFoundationMasterUITests.swift */; };
 		618424902BEFA03E00DBB4AB /* AVFoundationMasterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6184248F2BEFA03E00DBB4AB /* AVFoundationMasterUITestsLaunchTests.swift */; };
+		DE7078492C03130A00B723F7 /* PhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7078472C03130A00B723F7 /* PhotoCapture.swift */; };
+		DE70784A2C03130A00B723F7 /* PhotoCaptureContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7078482C03130A00B723F7 /* PhotoCaptureContentView.swift */; };
+		DE70784D2C03131000B723F7 /* CIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE70784B2C03131000B723F7 /* CIImage+Utils.swift */; };
+		DE70784E2C03131000B723F7 /* AVCaptureDevice+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE70784C2C03131000B723F7 /* AVCaptureDevice+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,16 +39,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6184246F2BEFA03D00DBB4AB /* AVFoundationMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AVFoundationMaster.app; path = "/Users/entaku/AVFoundationMaster/build/Debug-iphoneos/AVFoundationMaster.app"; sourceTree = "<absolute>"; };
 		618424722BEFA03D00DBB4AB /* AVFoundationMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationMasterApp.swift; sourceTree = "<group>"; };
 		618424742BEFA03D00DBB4AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		618424762BEFA03E00DBB4AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618424792BEFA03E00DBB4AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6184247F2BEFA03E00DBB4AB /* AVFoundationMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AVFoundationMasterTests.xctest; path = "/Users/entaku/AVFoundationMaster/build/Debug-iphoneos/AVFoundationMasterTests.xctest"; sourceTree = "<absolute>"; };
 		618424832BEFA03E00DBB4AB /* AVFoundationMasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationMasterTests.swift; sourceTree = "<group>"; };
-		618424892BEFA03E00DBB4AB /* AVFoundationMasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AVFoundationMasterUITests.xctest; path = "/Users/entaku/AVFoundationMaster/build/Debug-iphoneos/AVFoundationMasterUITests.xctest"; sourceTree = "<absolute>"; };
 		6184248D2BEFA03E00DBB4AB /* AVFoundationMasterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationMasterUITests.swift; sourceTree = "<group>"; };
 		6184248F2BEFA03E00DBB4AB /* AVFoundationMasterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationMasterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DE7078362C03120E00B723F7 /* AVFoundationMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVFoundationMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7078372C03120E00B723F7 /* AVFoundationMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVFoundationMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7078382C03120E00B723F7 /* AVFoundationMasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVFoundationMasterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7078472C03130A00B723F7 /* PhotoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCapture.swift; sourceTree = "<group>"; };
+		DE7078482C03130A00B723F7 /* PhotoCaptureContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureContentView.swift; sourceTree = "<group>"; };
+		DE70784B2C03131000B723F7 /* CIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+Utils.swift"; sourceTree = "<group>"; };
+		DE70784C2C03131000B723F7 /* AVCaptureDevice+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,9 @@
 				618424822BEFA03E00DBB4AB /* AVFoundationMasterTests */,
 				6184248C2BEFA03E00DBB4AB /* AVFoundationMasterUITests */,
 				617A959D2BEFAC9200FB566D /* Frameworks */,
+				DE7078362C03120E00B723F7 /* AVFoundationMaster.app */,
+				DE7078372C03120E00B723F7 /* AVFoundationMasterTests.xctest */,
+				DE7078382C03120E00B723F7 /* AVFoundationMasterUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +106,7 @@
 			children = (
 				618424722BEFA03D00DBB4AB /* AVFoundationMasterApp.swift */,
 				618424742BEFA03D00DBB4AB /* ContentView.swift */,
+				DE7078462C0312E500B723F7 /* MediaCapture */,
 				618424762BEFA03E00DBB4AB /* Assets.xcassets */,
 				618424782BEFA03E00DBB4AB /* Preview Content */,
 			);
@@ -126,6 +138,33 @@
 			path = AVFoundationMasterUITests;
 			sourceTree = "<group>";
 		};
+		DE7078442C0312E500B723F7 /* PhotoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				DE7078472C03130A00B723F7 /* PhotoCapture.swift */,
+				DE7078482C03130A00B723F7 /* PhotoCaptureContentView.swift */,
+			);
+			path = PhotoCapture;
+			sourceTree = "<group>";
+		};
+		DE7078452C0312E500B723F7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DE70784C2C03131000B723F7 /* AVCaptureDevice+Utils.swift */,
+				DE70784B2C03131000B723F7 /* CIImage+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DE7078462C0312E500B723F7 /* MediaCapture */ = {
+			isa = PBXGroup;
+			children = (
+				DE7078442C0312E500B723F7 /* PhotoCapture */,
+				DE7078452C0312E500B723F7 /* Utils */,
+			);
+			path = MediaCapture;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,7 +185,7 @@
 				617A959E2BEFAC9200FB566D /* AVPlayerContentView */,
 			);
 			productName = AVFoundationMaster;
-			productReference = 6184246F2BEFA03D00DBB4AB /* AVFoundationMaster.app */;
+			productReference = DE7078362C03120E00B723F7 /* AVFoundationMaster.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6184247E2BEFA03E00DBB4AB /* AVFoundationMasterTests */ = {
@@ -164,7 +203,7 @@
 			);
 			name = AVFoundationMasterTests;
 			productName = AVFoundationMasterTests;
-			productReference = 6184247F2BEFA03E00DBB4AB /* AVFoundationMasterTests.xctest */;
+			productReference = DE7078372C03120E00B723F7 /* AVFoundationMasterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		618424882BEFA03E00DBB4AB /* AVFoundationMasterUITests */ = {
@@ -182,7 +221,7 @@
 			);
 			name = AVFoundationMasterUITests;
 			productName = AVFoundationMasterUITests;
-			productReference = 618424892BEFA03E00DBB4AB /* AVFoundationMasterUITests.xctest */;
+			productReference = DE7078382C03120E00B723F7 /* AVFoundationMasterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -259,8 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE70784A2C03130A00B723F7 /* PhotoCaptureContentView.swift in Sources */,
+				DE70784D2C03131000B723F7 /* CIImage+Utils.swift in Sources */,
 				618424752BEFA03D00DBB4AB /* ContentView.swift in Sources */,
 				618424732BEFA03D00DBB4AB /* AVFoundationMasterApp.swift in Sources */,
+				DE7078492C03130A00B723F7 /* PhotoCapture.swift in Sources */,
+				DE70784E2C03131000B723F7 /* AVCaptureDevice+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +470,8 @@
 				DEVELOPMENT_TEAM = 4YZQY4C47E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "It's required for taking photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "It's required for saving photos and editting photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -456,6 +501,8 @@
 				DEVELOPMENT_TEAM = 4YZQY4C47E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "It's required for taking photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "It's required for saving photos and editting photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

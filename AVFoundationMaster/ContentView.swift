@@ -12,14 +12,19 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: AVPlayerContentView()) {
-                    VStack {
+                Section(header: Text("Media Playbac")) {
+                    NavigationLink(destination: AVPlayerContentView()) {
                         Text("AVPlayerContentView")
                     }
-                    .padding()
+                }
+                Section(header: Text("Media Capture")) {
+                    NavigationLink(destination: PhotoCaptureContentView()) {
+                        Text("Photo Capture")
+                    }
                 }
             }
-            .navigationTitle("AVFoundationMaster") 
+            .listStyle(InsetGroupedListStyle())
+            .navigationTitle("AVFoundationMaster")
         }
     }
 }
