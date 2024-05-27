@@ -21,6 +21,9 @@ struct ContentView: View {
                     NavigationLink(destination: PhotoCaptureContentView()) {
                         Text("Photo Capture")
                     }
+                    NavigationLink(destination: VideoCaptureContentView()) {
+                        Text("Video Capture")
+                    }
                 }
             }
             .listStyle(InsetGroupedListStyle())
