@@ -1,22 +1,22 @@
 //
-//  PhotoCapture.swift
-//
-//
-//  Created by Naoya Maeda on 2024/05/25
-//
+//  VideoCapture.swift
+//  
+//  
+//  Created by Naoya Maeda on 2024/05/27
+//  
 //
 
 import UIKit
 import AVFoundation
 import Photos
 
-public class PhotoCapture: NSObject, ObservableObject {
+public class VideoCapture: NSObject, ObservableObject {
     private let captureSession = AVCaptureSession()
-    private let photoOutput = AVCapturePhotoOutput()
+    private let movieFileOutput = AVCaptureMovieFileOutput()
     private let videoDataOutput = AVCaptureVideoDataOutput()
     
     @Published var previewImage: UIImage?
-    private var compressedData: Data?
+    @Published var isRecording = false
     
     public override init() {
         super.init()
@@ -39,12 +39,21 @@ public class PhotoCapture: NSObject, ObservableObject {
             guard captureSession.canAddInput(input) else { return }
             captureSession.addInput(input)
             
-            guard captureSession.canAddOutput(photoOutput) else { return }
-            captureSession.addOutput(photoOutput)
-            videoDataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "mydispatchqueue"))
+            guard let audioDevice = AVCaptureDevice.default(for: .audio) else {
+                captureSession.commitConfiguration()
+                return
+            }
+            
+            let audioDeviceInput = try AVCaptureDeviceInput(device: audioDevice)
+            guard captureSession.canAddInput(audioDeviceInput) else { return }
+            captureSession.addInput(audioDeviceInput)
             
             guard captureSession.canAddOutput(videoDataOutput) else { return }
+            videoDataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "mydispatchqueue"))
             captureSession.addOutput(videoDataOutput)
+            
+            guard captureSession.canAddOutput(movieFileOutput) else { return }
+            captureSession.addOutput(movieFileOutput)
             
             captureSession.sessionPreset = AVCaptureSession.Preset.photo
         } catch {
@@ -55,18 +64,26 @@ public class PhotoCapture: NSObject, ObservableObject {
         captureSession.startRunning()
     }
     
-    func capturePhoto() async {
-        guard await AVCaptureDevice.isAuthorizedCamera else { return }
-        let settingsForMonitoring = AVCapturePhotoSettings()
-        photoOutput.capturePhoto(with: settingsForMonitoring, delegate: self)
+    func controlRecording() {
+        if isRecording {
+            movieFileOutput.stopRecording()
+            isRecording = false
+            AudioServicesPlaySystemSound(1118)
+        } else {
+            let tempDirectory: URL = URL(fileURLWithPath: NSTemporaryDirectory())
+            let fileURL: URL = tempDirectory.appendingPathComponent("sample.mov")
+            movieFileOutput.startRecording(to: fileURL, recordingDelegate: self)
+            isRecording = true
+            AudioServicesPlaySystemSound(1117)
+        }
+
     }
 }
 
-extension PhotoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
+extension VideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
     public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         let inputCIImage = CIImage(cvPixelBuffer: pixelBuffer)
-        
         if let cgImg = inputCIImage.toCGImage() {
             Task { @MainActor in
                 self.previewImage = UIImage(cgImage: cgImg, scale: 1, orientation: .right)
@@ -75,38 +92,18 @@ extension PhotoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
     }
 }
 
-extension PhotoCapture: AVCapturePhotoCaptureDelegate {
-    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        guard error == nil else {
-            print("Error broken photo data: \(error!)")
-            return
-        }
-        guard let photoData = photo.fileDataRepresentation() else {
-            print("No photo data to write.")
-            return
-        }
-        self.compressedData = photoData
-    }
-    
-    public func photoOutput(_ output: AVCapturePhotoOutput,
-                            didFinishCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings,
-                            error: Error?) {
-        guard error == nil else {
-            print("Error capture photo: \(error!)")
-            return
-        }
-        guard let compressedData = self.compressedData else {
-            print("The expected photo data isn't available.")
-            return
-        }
+extension VideoCapture: AVCaptureFileOutputRecordingDelegate {
+    public func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
         PHPhotoLibrary.requestAuthorization(for: .addOnly) { status in
             guard status == .authorized else { return }
-            PHPhotoLibrary.shared().performChanges {
+            PHPhotoLibrary.shared().performChanges({
                 let creationRequest = PHAssetCreationRequest.forAsset()
-                creationRequest.addResource(with: .photo, data: compressedData, options: nil)
-            } completionHandler: { success, error in
-                if let _ = error {
-                    print("Error save photo: \(error!)")
+                let options = PHAssetResourceCreationOptions()
+                options.shouldMoveFile = true
+                creationRequest.addResource(with: .video, fileURL: outputFileURL, options: nil)
+            }) { _, error in
+                if let error = error {
+                    print(error)
                 }
             }
         }
