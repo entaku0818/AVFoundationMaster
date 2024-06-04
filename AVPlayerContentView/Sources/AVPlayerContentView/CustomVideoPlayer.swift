@@ -18,13 +18,14 @@ public struct CustomVideoPlayer: View {
     public var body: some View {
         VStack {
             VideoPlayer(player: customPlayer.avPlayer)
-                .onAppear {
-                    customPlayer.play()
-                }
-                .onDisappear {
-                    customPlayer.pause()
-                }
-                .frame(height: 300)
+            .onAppear {
+                customPlayer.play()
+                addSynchronizedAnimationLayer()
+            }
+            .onDisappear {
+                customPlayer.pause()
+            }
+            .frame(height: 300)
 
             HStack {
                 Button(action: {
@@ -59,7 +60,7 @@ public struct CustomVideoPlayer: View {
 
             HStack {
                 Button(action: {
-                    let url = URL(string: "https://example.com/video.mp4")!  // 適当なURLを追加
+                    let url = URL(string: "https://example.com/video.mp4")!
                     customPlayer.add(url: url)
                 }) {
                     Text("Add Video")
@@ -85,7 +86,7 @@ public struct CustomVideoPlayer: View {
                     Text("Seek to 30s")
                 }
                 Button(action: {
-                    customPlayer.skipToItem(at: 0)  // 最初のアイテムにスキップ
+                    customPlayer.skipToItem(at: 0)
                 }) {
                     Text("Skip to First Item")
                 }
@@ -95,4 +96,33 @@ public struct CustomVideoPlayer: View {
                 .padding()
         }
     }
+
+    private func addSynchronizedAnimationLayer() {
+        guard let currentItem = customPlayer.avPlayer.currentItem else { return }
+
+        let synchronizedLayer = AVSynchronizedLayer(playerItem: currentItem)
+        let animationLayer = CALayer()
+        animationLayer.backgroundColor = UIColor.red.cgColor
+        animationLayer.frame = CGRect(x: 0, y: 50, width: 2, height: 2)
+
+        synchronizedLayer.addSublayer(animationLayer)
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            windowScene.windows.first?.layer.addSublayer(synchronizedLayer)
+        }
+
+        customPlayer.addPeriodicTimeObserver(interval: CMTime(seconds: 0.1, preferredTimescale: 600), queue: .main) { [self] time in
+            self.updateAnimationLayer(animationLayer, for: time)
+        }
+    }
+
+    private func updateAnimationLayer(_ layer: CALayer, for time: CMTime) {
+        guard let duration = customPlayer.avPlayer.currentItem?.duration.seconds, duration > 0 else { return }
+
+        let currentTime = time.seconds
+        let progress = CGFloat(currentTime / duration)
+        let maxWidth = UIScreen.main.bounds.width
+        layer.frame.size.width = maxWidth * progress
+    }
 }
+
+
