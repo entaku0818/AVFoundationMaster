@@ -21,6 +21,10 @@
 		DE70784A2C03130A00B723F7 /* PhotoCaptureContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7078482C03130A00B723F7 /* PhotoCaptureContentView.swift */; };
 		DE70784D2C03131000B723F7 /* CIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE70784B2C03131000B723F7 /* CIImage+Utils.swift */; };
 		DE70784E2C03131000B723F7 /* AVCaptureDevice+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE70784C2C03131000B723F7 /* AVCaptureDevice+Utils.swift */; };
+		DE7C131A2C4CBBDB004CA7D6 /* ManualCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7C13182C4CBBDB004CA7D6 /* ManualCapture.swift */; };
+		DE7C131B2C4CBBDB004CA7D6 /* ManualFocusCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7C13192C4CBBDB004CA7D6 /* ManualFocusCameraView.swift */; };
+		DE7C13202C4CD15E004CA7D6 /* FocusMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7C131F2C4CD159004CA7D6 /* FocusMode.swift */; };
+		DE7C13242C4CE640004CA7D6 /* CameraPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7C13232C4CE63B004CA7D6 /* CameraPosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		DE7078482C03130A00B723F7 /* PhotoCaptureContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureContentView.swift; sourceTree = "<group>"; };
 		DE70784B2C03131000B723F7 /* CIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+Utils.swift"; sourceTree = "<group>"; };
 		DE70784C2C03131000B723F7 /* AVCaptureDevice+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Utils.swift"; sourceTree = "<group>"; };
+		DE7C13182C4CBBDB004CA7D6 /* ManualCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCapture.swift; sourceTree = "<group>"; };
+		DE7C13192C4CBBDB004CA7D6 /* ManualFocusCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualFocusCameraView.swift; sourceTree = "<group>"; };
+		DE7C131F2C4CD159004CA7D6 /* FocusMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMode.swift; sourceTree = "<group>"; };
+		DE7C13232C4CE63B004CA7D6 /* CameraPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPosition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +182,21 @@
 			children = (
 				DE68DE272C04A40500052742 /* VideoCapture */,
 				DE7078442C0312E500B723F7 /* PhotoCapture */,
+				DE7C13172C4CBBBA004CA7D6 /* ManualPhotoCapture */,
 				DE7078452C0312E500B723F7 /* Utils */,
 			);
 			path = MediaCapture;
+			sourceTree = "<group>";
+		};
+		DE7C13172C4CBBBA004CA7D6 /* ManualPhotoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				DE7C13192C4CBBDB004CA7D6 /* ManualFocusCameraView.swift */,
+				DE7C13182C4CBBDB004CA7D6 /* ManualCapture.swift */,
+				DE7C131F2C4CD159004CA7D6 /* FocusMode.swift */,
+				DE7C13232C4CE63B004CA7D6 /* CameraPosition.swift */,
+			);
+			path = ManualPhotoCapture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,10 +333,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE68DE2B2C04A45000052742 /* VideoCapture.swift in Sources */,
+				DE7C13242C4CE640004CA7D6 /* CameraPosition.swift in Sources */,
 				DE68DE292C04A44300052742 /* VideoCaptureContentView.swift in Sources */,
 				DE70784A2C03130A00B723F7 /* PhotoCaptureContentView.swift in Sources */,
+				DE7C13202C4CD15E004CA7D6 /* FocusMode.swift in Sources */,
 				DE70784D2C03131000B723F7 /* CIImage+Utils.swift in Sources */,
 				618424752BEFA03D00DBB4AB /* ContentView.swift in Sources */,
+				DE7C131A2C4CBBDB004CA7D6 /* ManualCapture.swift in Sources */,
+				DE7C131B2C4CBBDB004CA7D6 /* ManualFocusCameraView.swift in Sources */,
 				618424732BEFA03D00DBB4AB /* AVFoundationMasterApp.swift in Sources */,
 				DE7078492C03130A00B723F7 /* PhotoCapture.swift in Sources */,
 				DE70784E2C03131000B723F7 /* AVCaptureDevice+Utils.swift in Sources */,
@@ -483,7 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AVFoundationMaster/Preview Content\"";
-				DEVELOPMENT_TEAM = 4YZQY4C47E;
+				DEVELOPMENT_TEAM = XX5J8N9TWW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "It's required for taking photos.";
@@ -515,7 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AVFoundationMaster/Preview Content\"";
-				DEVELOPMENT_TEAM = 4YZQY4C47E;
+				DEVELOPMENT_TEAM = XX5J8N9TWW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "It's required for taking photos.";

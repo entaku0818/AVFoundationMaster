@@ -24,6 +24,9 @@ struct ContentView: View {
                     NavigationLink(destination: VideoCaptureContentView()) {
                         Text("Video Capture")
                     }
+                    NavigationLink(destination: ManualFocusCameraView()) {
+                        Text("Manual Focus Camera")
+                    }
                 }
             }
             .listStyle(InsetGroupedListStyle())
