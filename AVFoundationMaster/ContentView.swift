@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import AVPlayerContentView
 
 struct ContentView: View {
     var body: some View {
