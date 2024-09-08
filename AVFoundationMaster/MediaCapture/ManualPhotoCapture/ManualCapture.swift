@@ -142,7 +142,6 @@ public class ManualVideoCapture: NSObject, ObservableObject {
             print("Setup session error: \(error.localizedDescription))")
         }
         
-        updateMinimumFocusDistance()
         
         captureSession.commitConfiguration()
         
