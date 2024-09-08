@@ -11,9 +11,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Media Playbac")) {
+                Section(header: Text("Media Playback")) {
                     NavigationLink(destination: AVPlayerContentView()) {
                         Text("AVPlayerContentView")
+                    }
+                    NavigationLink(destination: AVAudioPlayerContentView()) {
+                        Text("AVAudioPlayerContentView")
                     }
                 }
                 Section(header: Text("Media Capture")) {
