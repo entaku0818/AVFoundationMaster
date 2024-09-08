@@ -17,6 +17,8 @@
 		61AD80F22C8D547500C8F630 /* AVPlayerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD80EF2C8D547500C8F630 /* AVPlayerContentView.swift */; };
 		61AD80F32C8D547500C8F630 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD80F02C8D547500C8F630 /* CustomVideoPlayer.swift */; };
 		61AD80F52C8D554C00C8F630 /* AVAudioPlayerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD80F42C8D554C00C8F630 /* AVAudioPlayerContentView.swift */; };
+		61E2270B2C8DE6910032A088 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2270A2C8DE6910032A088 /* AudioPlayerManager.swift */; };
+		61E2270D2C8DE73F0032A088 /* audiofile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61E2270C2C8DE73F0032A088 /* audiofile.mp3 */; };
 		DE68DE292C04A44300052742 /* VideoCaptureContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68DE282C04A44300052742 /* VideoCaptureContentView.swift */; };
 		DE68DE2B2C04A45000052742 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68DE2A2C04A45000052742 /* VideoCapture.swift */; };
 		DE7078492C03130A00B723F7 /* PhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7078472C03130A00B723F7 /* PhotoCapture.swift */; };
@@ -57,6 +59,8 @@
 		61AD80EF2C8D547500C8F630 /* AVPlayerContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerContentView.swift; sourceTree = "<group>"; };
 		61AD80F02C8D547500C8F630 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
 		61AD80F42C8D554C00C8F630 /* AVAudioPlayerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayerContentView.swift; sourceTree = "<group>"; };
+		61E2270A2C8DE6910032A088 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		61E2270C2C8DE73F0032A088 /* audiofile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audiofile.mp3; sourceTree = "<group>"; };
 		DE68DE282C04A44300052742 /* VideoCaptureContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureContentView.swift; sourceTree = "<group>"; };
 		DE68DE2A2C04A45000052742 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		DE7078362C03120E00B723F7 /* AVFoundationMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVFoundationMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,13 +124,13 @@
 		618424712BEFA03D00DBB4AB /* AVFoundationMaster */ = {
 			isa = PBXGroup;
 			children = (
+				61E227092C8DE5950032A088 /* AVAudio */,
 				61AD80F12C8D547500C8F630 /* AVPlayerContent */,
 				618424722BEFA03D00DBB4AB /* AVFoundationMasterApp.swift */,
 				618424742BEFA03D00DBB4AB /* ContentView.swift */,
 				DE7078462C0312E500B723F7 /* MediaCapture */,
 				618424762BEFA03E00DBB4AB /* Assets.xcassets */,
 				618424782BEFA03E00DBB4AB /* Preview Content */,
-				61AD80F42C8D554C00C8F630 /* AVAudioPlayerContentView.swift */,
 			);
 			path = AVFoundationMaster;
 			sourceTree = "<group>";
@@ -163,6 +167,16 @@
 				61AD80F02C8D547500C8F630 /* CustomVideoPlayer.swift */,
 			);
 			path = AVPlayerContent;
+			sourceTree = "<group>";
+		};
+		61E227092C8DE5950032A088 /* AVAudio */ = {
+			isa = PBXGroup;
+			children = (
+				61E2270C2C8DE73F0032A088 /* audiofile.mp3 */,
+				61AD80F42C8D554C00C8F630 /* AVAudioPlayerContentView.swift */,
+				61E2270A2C8DE6910032A088 /* AudioPlayerManager.swift */,
+			);
+			path = AVAudio;
 			sourceTree = "<group>";
 		};
 		DE68DE272C04A40500052742 /* VideoCapture */ = {
@@ -322,6 +336,7 @@
 			files = (
 				6184247A2BEFA03E00DBB4AB /* Preview Assets.xcassets in Resources */,
 				618424772BEFA03E00DBB4AB /* Assets.xcassets in Resources */,
+				61E2270D2C8DE73F0032A088 /* audiofile.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +366,7 @@
 				DE68DE292C04A44300052742 /* VideoCaptureContentView.swift in Sources */,
 				DE70784A2C03130A00B723F7 /* PhotoCaptureContentView.swift in Sources */,
 				61AD80F52C8D554C00C8F630 /* AVAudioPlayerContentView.swift in Sources */,
+				61E2270B2C8DE6910032A088 /* AudioPlayerManager.swift in Sources */,
 				DE7C13202C4CD15E004CA7D6 /* FocusMode.swift in Sources */,
 				DE70784D2C03131000B723F7 /* CIImage+Utils.swift in Sources */,
 				618424752BEFA03D00DBB4AB /* ContentView.swift in Sources */,
