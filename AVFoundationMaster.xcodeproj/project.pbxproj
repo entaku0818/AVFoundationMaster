@@ -19,6 +19,8 @@
 		61AD80F52C8D554C00C8F630 /* AVAudioPlayerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD80F42C8D554C00C8F630 /* AVAudioPlayerContentView.swift */; };
 		61E2270B2C8DE6910032A088 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2270A2C8DE6910032A088 /* AudioPlayerManager.swift */; };
 		61E2270D2C8DE73F0032A088 /* audiofile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61E2270C2C8DE73F0032A088 /* audiofile.mp3 */; };
+		61E2270F2C8DE8850032A088 /* AudioRecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2270E2C8DE8850032A088 /* AudioRecorderManager.swift */; };
+		61E227112C8DE90F0032A088 /* AudioRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E227102C8DE90F0032A088 /* AudioRecorderView.swift */; };
 		DE68DE292C04A44300052742 /* VideoCaptureContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68DE282C04A44300052742 /* VideoCaptureContentView.swift */; };
 		DE68DE2B2C04A45000052742 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68DE2A2C04A45000052742 /* VideoCapture.swift */; };
 		DE7078492C03130A00B723F7 /* PhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7078472C03130A00B723F7 /* PhotoCapture.swift */; };
@@ -61,6 +63,8 @@
 		61AD80F42C8D554C00C8F630 /* AVAudioPlayerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayerContentView.swift; sourceTree = "<group>"; };
 		61E2270A2C8DE6910032A088 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 		61E2270C2C8DE73F0032A088 /* audiofile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audiofile.mp3; sourceTree = "<group>"; };
+		61E2270E2C8DE8850032A088 /* AudioRecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderManager.swift; sourceTree = "<group>"; };
+		61E227102C8DE90F0032A088 /* AudioRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderView.swift; sourceTree = "<group>"; };
 		DE68DE282C04A44300052742 /* VideoCaptureContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureContentView.swift; sourceTree = "<group>"; };
 		DE68DE2A2C04A45000052742 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		DE7078362C03120E00B723F7 /* AVFoundationMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVFoundationMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +179,8 @@
 				61E2270C2C8DE73F0032A088 /* audiofile.mp3 */,
 				61AD80F42C8D554C00C8F630 /* AVAudioPlayerContentView.swift */,
 				61E2270A2C8DE6910032A088 /* AudioPlayerManager.swift */,
+				61E2270E2C8DE8850032A088 /* AudioRecorderManager.swift */,
+				61E227102C8DE90F0032A088 /* AudioRecorderView.swift */,
 			);
 			path = AVAudio;
 			sourceTree = "<group>";
@@ -368,10 +374,12 @@
 				61AD80F52C8D554C00C8F630 /* AVAudioPlayerContentView.swift in Sources */,
 				61E2270B2C8DE6910032A088 /* AudioPlayerManager.swift in Sources */,
 				DE7C13202C4CD15E004CA7D6 /* FocusMode.swift in Sources */,
+				61E227112C8DE90F0032A088 /* AudioRecorderView.swift in Sources */,
 				DE70784D2C03131000B723F7 /* CIImage+Utils.swift in Sources */,
 				618424752BEFA03D00DBB4AB /* ContentView.swift in Sources */,
 				61AD80F32C8D547500C8F630 /* CustomVideoPlayer.swift in Sources */,
 				DE7C131A2C4CBBDB004CA7D6 /* ManualCapture.swift in Sources */,
+				61E2270F2C8DE8850032A088 /* AudioRecorderManager.swift in Sources */,
 				DE7C131B2C4CBBDB004CA7D6 /* ManualFocusCameraView.swift in Sources */,
 				61AD80F22C8D547500C8F630 /* AVPlayerContentView.swift in Sources */,
 				618424732BEFA03D00DBB4AB /* AVFoundationMasterApp.swift in Sources */,
