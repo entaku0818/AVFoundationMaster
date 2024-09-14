@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		616788852C95D4BC00DB35FE /* AudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616788842C95D4BC00DB35FE /* AudioSession.swift */; };
 		618424732BEFA03D00DBB4AB /* AVFoundationMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618424722BEFA03D00DBB4AB /* AVFoundationMasterApp.swift */; };
 		618424752BEFA03D00DBB4AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618424742BEFA03D00DBB4AB /* ContentView.swift */; };
 		618424772BEFA03E00DBB4AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618424762BEFA03E00DBB4AB /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		616788842C95D4BC00DB35FE /* AudioSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSession.swift; sourceTree = "<group>"; };
 		618424722BEFA03D00DBB4AB /* AVFoundationMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationMasterApp.swift; sourceTree = "<group>"; };
 		618424742BEFA03D00DBB4AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		618424762BEFA03E00DBB4AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				61E2270A2C8DE6910032A088 /* AudioPlayerManager.swift */,
 				61E2270E2C8DE8850032A088 /* AudioRecorderManager.swift */,
 				61E227102C8DE90F0032A088 /* AudioRecorderView.swift */,
+				616788842C95D4BC00DB35FE /* AudioSession.swift */,
 			);
 			path = AVAudio;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				61E2270B2C8DE6910032A088 /* AudioPlayerManager.swift in Sources */,
 				DE7C13202C4CD15E004CA7D6 /* FocusMode.swift in Sources */,
 				61E227112C8DE90F0032A088 /* AudioRecorderView.swift in Sources */,
+				616788852C95D4BC00DB35FE /* AudioSession.swift in Sources */,
 				DE70784D2C03131000B723F7 /* CIImage+Utils.swift in Sources */,
 				618424752BEFA03D00DBB4AB /* ContentView.swift in Sources */,
 				61AD80F32C8D547500C8F630 /* CustomVideoPlayer.swift in Sources */,

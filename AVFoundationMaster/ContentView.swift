@@ -21,6 +21,9 @@ struct ContentView: View {
                     NavigationLink(destination: AudioRecorderView()) {
                         Text("AudioRecorderView")
                     }
+                    NavigationLink(destination: AudioSessionView()) {
+                        Text("AudioSessionView")
+                    }
                 }
                 Section(header: Text("Media Capture")) {
                     NavigationLink(destination: PhotoCaptureContentView()) {
